@@ -1,9 +1,10 @@
-from starlette import status
-from model.check_data import is_blank
-from config import mydb
-from locations.schemas import Location, LocationResult, LocationListResult
-from slugify import slugify
 from fastapi import APIRouter, Response
+from slugify import slugify
+from starlette import status
+
+from db import mydb
+from model.check_data import is_blank
+from schemas import Location, LocationResult, LocationListResult
 
 location_router = APIRouter()
 
