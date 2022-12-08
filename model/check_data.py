@@ -11,8 +11,3 @@ def is_integer(ID: any):
     v = Validator({'id': {'type': 'integer'}})
     result = v.validate({'id': ID})
     return result
-
-
-if __name__ == '__main__':
-    a = is_integer(5)
-    print(a)
