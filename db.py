@@ -1,9 +1,11 @@
 import psycopg2
 
+from config import settings
+
 mydb = psycopg2.connect(
-    host="localhost",
-    port=4321,
-    database="location_service",
-    user="thanhpv",
-    password="22121992"
+    host=settings.PG_HOST,
+    port=settings.PG_PORT,
+    database=settings.PG_DATABASE,
+    user=settings.PG_USER,
+    password=settings.PG_PASSWORD
 )
