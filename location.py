@@ -96,7 +96,7 @@ def __check_exist(req: dict, new_req: dict):
     return new_req, ""
 
 
-@location_router.delete('/locations/{id}', status_code=200)
+@location_router.delete('/locations/{id}', status_code=204)
 async def update_job(id: int, response: Response):
     boolean, result = detail_location(id, response)
     if boolean is False:
